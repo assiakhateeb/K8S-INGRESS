@@ -11,7 +11,7 @@ In this project we'll :
 4. Create an Ingress to access the service using http://127.0.0.1/music URL .
 
 ## Getting started
-<img width="600" alt="pictures" src="pictures/steps.png">
+<img width="400" alt="pictures" src="pictures/steps.png">
 Clone the github repository
 ```
 git clone https://github.com/assiakhateeb/K8S-INGRESS.git
