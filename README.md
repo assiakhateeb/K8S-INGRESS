@@ -55,21 +55,21 @@ If the Deployment is being created, the output is similar to the following:
 
     ```
 3. In the file spring-deployment.yaml we've created also a service and an ingress, check the file.
-3.1 
+3.1 <br>
 Run ```kubectl get svc -owide``` to check if the Service was created.
 If the Service is being created, the output is similar to the following:
     ```
     NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE     SELECTOR
     spring-service   ClusterIP   10.98.146.110   <none>        8090/TCP   108s    app=spring
     ```
-    3.2
+    3.2 <br>
     Run ```kubectl get ingress -owide``` to check if the Ingress was created.
     If the Ingress is being created, the output is similar to the following:
     ```
     NAME             CLASS    HOSTS   ADDRESS    PORTS   AGE
     spring-ingrees   <none>   *       localhost  80      5m27s
     ```
-    3.3
+    3.3 <br>
     Run ```kubectl get po -owide``` to check if the Pods was created.
     If the Pods is being created, the output is similar to the following:   
     ```
@@ -81,15 +81,15 @@ If the Service is being created, the output is similar to the following:
     ```
     kubectl scale deployment --replicas=2 spring-deployment
     ```
-    4.1 
+    4.1 <br>
     Run ```kubectl get po -owide``` to check if the Pods.
     Output:
     ```
     NAME                                READY   STATUS              RESTARTS   AGE   IP          NODE             NOMINATED NODE   READINESS GATES
     spring-deployment-dd9dbb4d8-82gng   1/1     Running             0          67s   10.1.0.63   docker-desktop   <none>           <none>
-    spring-deployment-dd9dbb4d8-q5r5w   0/1     ContainerCreating   0          5s    <none>      docker-desktop   <none>           <none>
+    spring-deployment-dd9dbb4d8-q5r5w   0/1     Running             0          50s   10.1.0.64   docker-desktop   <none>           <none>
     ```
-5. Forward a local port to a port on the deployment Pods.
+5. Forward a local port to a port on the deployment's Pods.
     ```
     kubectl port-forward deployments/spring-deployment 8080
     ```
