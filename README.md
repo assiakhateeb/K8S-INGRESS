@@ -52,7 +52,6 @@ If the Deployment is being created, the output is similar to the following:
     ```
     NAME                READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                         SELECTOR
     spring-deployment   2/2     2            2           88s   spring       yanivomc/spring-music:latest   app=spring
-
     ```
 3. In the file k8s.yaml we've created also a service and an ingress, check the file.
 3.1 <br>
