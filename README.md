@@ -12,7 +12,7 @@ In this project we'll :
 
 ## Getting started
 
-<img width="400" alt="pictures" src="pictures/steps.png">
+<img width="300" alt="pictures" src="pictures/steps.png">
 
 Clone the github repository
 ```
