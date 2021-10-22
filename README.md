@@ -1,8 +1,8 @@
 <h1 align="center">Kubernetes Ingress Task</h1>
-<!-- <p align="center">
-    # Kubernetes Ingress
-</p> -->
-<img width="600" alt="pictures" src="pictures/k8s.png">
+<p align="center">
+  <img width="600" alt="pictures" src="pictures/k8s.PNG">>
+</p>
+
 ## Description
 In this project we'll :
 1. Create a new deployment using the image yanivomc/spring-music:latest.
@@ -11,7 +11,9 @@ In this project we'll :
 4. Create an Ingress to access the service using http://127.0.0.1/music URL .
 
 ## Getting started
+
 <img width="400" alt="pictures" src="pictures/steps.png">
+
 Clone the github repository
 ```
 git clone https://github.com/assiakhateeb/K8S-INGRESS.git
@@ -100,7 +102,7 @@ If the Service is being created, the output is similar to the following:
     Handling connection for 8080
     ```
 6. Now you can access http://127.0.0.1/music URL.
-<img width="800" alt="pictures" src="pictures/lh.png">
+<img width="800" alt="pictures" src="pictures/lh.PNG">
 
 Full Spring Music Page:
 <img width="800" alt="pictures" src="pictures/Spring Music.png">
