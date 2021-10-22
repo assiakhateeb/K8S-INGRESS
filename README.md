@@ -24,7 +24,7 @@ cd K8S-INGRESS
 The following items should be installed and ready in your system:
 * [docker](https://docs.docker.com/get-docker/)
 * [Kubernetes](https://kubernetes.io/docs/setup/) 
-*  NGINX Ingress Controller [Installation Guide](https://kubernetes.github.io/ingress-nginx/deploy/#gce-gke)
+*  NGINX Ingress Controller [Installation Guide](https://kubernetes.github.io/ingress-nginx/deploy/#gce-gke) <br>
 Run ```kubectl get pods -n ingress-nginx``` to check if nginx controller is running.
 The output is similar to the following: 
     ```
