@@ -1,0 +1,71 @@
+# Deployment
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: spring-deployment # deployment name
+  labels:
+    app: spring
+
+spec:
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  selector:   # field defines how the Deployment finds which Pods to manage.
+    matchLabels:
+      app: spring
+  template:   # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: spring # the Pods are labeled app: spring.
+    spec:
+      containers:
+      - name: spring
+        image: yanivomc/spring-music:latest
+        ports:
+        - containerPort: 8080
+
+---
+# Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-service
+spec:
+  selector:
+    app: spring
+  type: ClusterIP   # When you create a Service of type ClusterIP,
+                    # Kubernetes creates a stable IP address that 
+                    # is accessible from nodes in the cluster.
+  ports:
+    - port: 8090
+      targetPort: 8080
+
+---
+# Ingress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spring-ingrees
+  annotations:
+    kuberntes.io/ingrees.class: nginx
+    nginx.ingrees.kuberntes.io/ssl-redirect: "false"
+    nginx.ingrees.kuberntes.io/use-regex: "true"
+    nginx.ingrees.kuberntes.io/rewrite-target: /$1
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /music(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: spring-service
+            port:
+              number: 8090
+
+      - path: /(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: spring-service
+            port:
+              number: 8090
