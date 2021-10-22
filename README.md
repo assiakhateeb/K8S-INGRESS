@@ -117,6 +117,6 @@ Full Spring Music Page:
   - [ingress-nginx](https://github.com/kubernetes/ingress-nginx) 
  
  ### Useful Links
- [Deployments | Kubernetes](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
- [Service | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/service/)
+ [Deployments | Kubernetes](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) <br>
+ [Service | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/service/) <br>
  [Use Port Forwarding to Access Applications in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
