@@ -45,7 +45,7 @@ Before you begin, make sure your Kubernetes cluster is up and running.</br> Foll
 
 1. Create the Deployment by running the following command:
     ```
-    kubectl apply -f spring-deployment.yaml
+    kubectl apply -f k8s.yaml
     ```
 2. Run ```kubectl get deploy -owide``` to check if the Deployment was created.
 If the Deployment is being created, the output is similar to the following:
@@ -54,7 +54,7 @@ If the Deployment is being created, the output is similar to the following:
     spring-deployment   2/2     2            2           88s   spring       yanivomc/spring-music:latest   app=spring
 
     ```
-3. In the file spring-deployment.yaml we've created also a service and an ingress, check the file.
+3. In the file k8s.yaml we've created also a service and an ingress, check the file.
 3.1 <br>
 Run ```kubectl get svc -owide``` to check if the Service was created.
 If the Service is being created, the output is similar to the following:
