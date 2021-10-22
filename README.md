@@ -1,6 +1,6 @@
 <h1 align="center">Kubernetes Ingress Task</h1>
 <p align="center">
-  <img width="600" alt="pictures" src="pictures/k8s.PNG">>
+  <img width="600" alt="pictures" src="pictures/k8s.PNG">
 </p>
 
 ## Description
